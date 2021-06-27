@@ -1,2 +1,2 @@
 # COVIDCARE
- primeiro repositorio versionado - criado na faculdade Ads
+ primeiro repositorio versionado - software  desenvolvido em C(projeto da faculdade)
