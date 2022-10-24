@@ -3,58 +3,18 @@
 #include<stdlib.h>
 #include<locale.h>
 
-void imprimeTela_SISPEC(){
-	printf("\t\t\t\t\t========================\n");
-	printf("\t\t\t\t\t|       COVIDCARE      |\n");
-	printf("\t\t\t\t\t========================\n");
-}
-void imprimeTela_MENU(){
-	printf("========================================\n");
-	printf("\n[1] CADASTRAR PACIENTE\n");
-	printf("[2] CONSULTAR GRUPO DE RISCO\n");
-	printf("[3] CONSULTAR REGISTRO\n");
-	printf("[4] CADASTRAR NOVO USUÁRIO DO SISTEMA\n");
-	printf("[5] SAIR DO SISTEMA \n");
-	printf("========================================\n");
-	printf("\nescolha uma opcao:");
-}		
-void imprimeTela_cadastroUsuario(){
-	printf("==========================\n");
-	printf("|  CADASTRO DE USUARIOS  |\n");
-	printf("==========================\n");
-}
-void imprimeTela_cadastroPacientes(){
-	printf("=========================\n");
-	printf("| CADASTRO DE PACIENTES |\n");	
-	printf("=========================\n");
-}
-
-
-struct ficha_paciente{
-	char nome[50];
-	int idade;
-	char sexo[15];
-	char cpf[12];
-	char comorbidade[40];
-	//data nascimento
-	int dia,mes,ano;
-	//endereco
-	char rua[40];
-	int numero;
-	char bairro[20];
-	char cidade[20];
-	int cep;
-};
-
-int main(){
 			setlocale(LC_ALL,"Portuguese");
 			FILE *login, *cad_paciente, *gp_risco;
 			struct ficha_paciente ficha_paciente[4];
 			char usuario[20],pesquisaUsuario[20],pesquisaPaciente[50];
 			int i,u,senha,pesquisaSenha,escolha,res;
+
+int main(){
+			
 		
 			//efetuar login para entrar no sistema
 			imprimeTela_SISPEC();
+			
 			printf("\n\t\t\t\t\tUSUÁRIO..: ");
 			fflush(stdin);
 			scanf("%s",&pesquisaUsuario);
@@ -256,4 +216,51 @@ int main(){
 			return 0;
 }
 
+String informeUsuario(){
+	printf("\n\t\t\t\t\tUSUÁRIO..: ");
+	fflush(stdin);
+	scanf("%s",&pesquisaUsuario);
+}
+void imprimeTela_SISPEC(){
+	printf("\t\t\t\t\t========================\n");
+	printf("\t\t\t\t\t|       COVIDCARE      |\n");
+	printf("\t\t\t\t\t========================\n");
+}
+void imprimeTela_MENU(){
+	printf("========================================\n");
+	printf("\n[1] CADASTRAR PACIENTE\n");
+	printf("[2] CONSULTAR GRUPO DE RISCO\n");
+	printf("[3] CONSULTAR REGISTRO\n");
+	printf("[4] CADASTRAR NOVO USUÁRIO DO SISTEMA\n");
+	printf("[5] SAIR DO SISTEMA \n");
+	printf("========================================\n");
+	printf("\nescolha uma opcao:");
+}		
+void imprimeTela_cadastroUsuario(){
+	printf("==========================\n");
+	printf("|  CADASTRO DE USUARIOS  |\n");
+	printf("==========================\n");
+}
+void imprimeTela_cadastroPacientes(){
+	printf("=========================\n");
+	printf("| CADASTRO DE PACIENTES |\n");	
+	printf("=========================\n");
+}
+
+
+struct ficha_paciente{
+	char nome[50];
+	int idade;
+	char sexo[15];
+	char cpf[12];
+	char comorbidade[40];
+	//data nascimento
+	int dia,mes,ano;
+	//endereco
+	char rua[40];
+	int numero;
+	char bairro[20];
+	char cidade[20];
+	int cep;
+};
 
